@@ -1,6 +1,6 @@
 - 👋 Hi, I’m  Venkata Sumanth madamala
 - 👀 I’m interested in Web Development.
-- 💞️ I’m looking to collaborate on ...
+- ✨ I’m looking to collaborate on ...
 - 📫 How to reach me sumanth6993@gmail.com
 
 <!---
