@@ -1,0 +1,33 @@
+<main class="page">
+  <section class="card">
+    <h1>Mini Angular + Pretext demo</h1>
+    <p>
+      This example predicts chat bubble size <strong>before</strong> the message is painted in the DOM.
+      It avoids layout shifts in live chat and streaming AI responses.
+    </p>
+
+    <label for="draft">Message draft</label>
+    <textarea
+      id="draft"
+      rows="5"
+      [ngModel]="draftMessage()"
+      (ngModelChange)="draftMessage.set($event)"
+    ></textarea>
+
+    <div class="metrics">
+      <div><span>Width cap:</span> {{ maxBubbleWidth }}px</div>
+      <div><span>Predicted lines:</span> {{ bubble().predictedLines }}</div>
+      <div><span>Predicted height:</span> {{ bubble().predictedHeight }}px</div>
+    </div>
+
+    <h2>Preview bubble</h2>
+    <div
+      class="bubble"
+      [style.maxWidth.px]="maxBubbleWidth"
+      [style.height.px]="bubble().predictedHeight"
+      [style.lineHeight.px]="lineHeight"
+    >
+      {{ bubble().text }}
+    </div>
+  </section>
+</main>
